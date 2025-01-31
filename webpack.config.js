@@ -8,6 +8,7 @@ module.exports = {
     devServer: {
         static: path.join(__dirname, 'dist'),
         port: 3010,
+        historyApiFallback: true,
     },
     output: {
         publicPath: "auto",
@@ -32,6 +33,7 @@ module.exports = {
                 app1: "app1@http://localhost:3001/remoteEntry.js",
                 app2: "app2@http://localhost:3002/remoteEntry.js",
             },
+
             shared: { react: { singleton: true }, 'react-dom': { singleton: true } },
         }),
         new HtmlWebpackPlugin({
