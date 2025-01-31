@@ -11,6 +11,7 @@ module.exports = {
         historyApiFallback: true,
     },
     output: {
+
         publicPath: "auto",
     },
     module: {
