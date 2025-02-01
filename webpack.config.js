@@ -4,7 +4,7 @@ const path = require('path')
 
 module.exports = {
     entry: "./src/index",
-    mode: "development",
+    mode: "production",
     devServer: {
         static: path.join(__dirname, 'build'),
         port: 3010,
@@ -33,8 +33,8 @@ module.exports = {
         new ModuleFederationPlugin({
             name: "mainApp",
             remotes: {
-                app1: "app1@http://localhost:3001/remoteEntry.js",
-                app2: "app2@http://localhost:3002/remoteEntry.js",
+                app1: "app1@https://email-micro-fa.vercel.app/remoteEntry.js",
+                app2: "app2@https://chatting-micro-fa.vercel.app/remoteEntry.js",
             },
 
             shared: { react: { singleton: true }, 'react-dom': { singleton: true } },
