@@ -18,11 +18,11 @@ function App() {
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
-              <li className="nav-item active">
+              {/* <li className="nav-item active">
                 <Link className="nav-link" to='/'>Main App</Link>
-              </li>
+              </li> */}
               <li className="nav-item active">
-                <Link className="nav-link" to='/email'>Email</Link>
+                <Link className="nav-link" to='/'>Email</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to='/chat'>Chat App</Link>
@@ -33,8 +33,8 @@ function App() {
         </nav>
 
         <Routes>
-          <Route path='/' element={<HomePage></HomePage>}></Route>
-          <Route path='/email' element={<EmailComponent />}></Route>
+          {/* <Route path='/' element={<HomePage></HomePage>}></Route> */}
+          <Route path='/' element={<EmailComponent />}></Route>
           <Route path='/chat' element={<ChatComp />}></Route>
 
         </Routes>
